@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:single-spa:angular-app": "ng build angular-app --prod --deploy-url https://deepblue-will.github.io/single-spa-sample/angular-app/",
+    "build:single-spa:angular-app": "ng build angular-app --prod --deploy-url /angular-app/",
     "serve:single-spa:angular-app": "ng s --project angular-app --disable-host-check --port 4300 --deploy-url http://localhost:4300/ --live-reload false"
   },
   "private": true,
