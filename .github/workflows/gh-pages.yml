@@ -1,0 +1,37 @@
+name: github pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install, Build Root
+        run: |
+          npm i
+          npm run build
+
+      - name: Install, build GlobalNav
+        working-directory: ./apps/global-nav
+        run: |
+          npm i
+          npm run build:single-spa:global-nav
+          cp -r ./dist/global-nav ../../dist/global-nav
+
+      - name: Install, build GlobalNav
+        working-directory: ./apps/angular-app
+        run: |
+          npm i
+          npm run build:single-spa:angular-app
+          cp -r ./dist/angular-app ../../dist/angular-app
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
