@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~11.2.13",
     "@angular/platform-browser-dynamic": "~11.2.13",
     "@angular/router": "~11.2.13",
+    "ng-zorro-antd": "^11.4.1",
     "rxjs": "~6.6.0",
     "single-spa": ">=4.0.0",
     "single-spa-angular": "^4.9.2",
