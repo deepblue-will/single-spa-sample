@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:single-spa:global-nav": "ng build global-nav --prod --deploy-url http://localhost:4200/",
+    "build:single-spa:global-nav": "ng build global-nav --prod --deploy-url https://deepblue-will.github.io/single-spa-sample/",
     "serve:single-spa:global-nav": "ng s --project global-nav --disable-host-check --port 4200 --deploy-url http://localhost:4200/ --live-reload false"
   },
   "private": true,
